@@ -40,17 +40,17 @@ function getData() {
         success: function(data) {
             console.log(data);
             $('.responses').children().remove();
-            data.forEach(function(person, i) {
+            data.forEach(function(person) {
                 $('.responses').append('<p></p>');
 
                 var $el = $('.responses').children().last();
 
-                $el.append(data[i].id + ': ');
-                $el.append(data[i].name + ', ');
-                $el.append(data[i].address + ', ');
-                $el.append(data[i].city + ', ');
-                $el.append(data[i].state + ', ');
-                $el.append(data[i].zip_code);
+                $el.append(person.id + ': ');
+                $el.append(person.name + ', ');
+                $el.append(person.address + ', ');
+                $el.append(person.city + ', ');
+                $el.append(person.state + ', ');
+                $el.append(person.zip_code);
             })
 
 
